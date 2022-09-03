@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'restaurants#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :restaurants, only: %i[index show] do
-    resources :bookings, only: %i[new create update edit]
+    resources :bookings, only: %i[new create]
   end
-  resources :bookings, only: :destroy
+  resources :bookings, only: %i[show index update edit]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get 'about', to: 'pages#about'
-
-  get 'my_bookings', to: 'pages#my_bookings'
 end

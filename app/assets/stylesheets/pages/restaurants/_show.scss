@@ -1,0 +1,70 @@
+.restaurant {
+    margin: 20px;
+    height: 250px;
+    background: white;
+    border-radius: 4px;
+    box-shadow:  0 1px 7px rgba(0,0,0,.05);
+  }
+  
+  .restaurant-location {
+    margin-left: 10px;
+    margin-bottom: 3px;
+    i {
+      margin-right: 5px;
+    }
+  }
+  
+  .restaurant-location p {
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0px;
+  }
+  
+  .restaurant-photo {
+    height: 60%;
+  }
+  
+  .restaurant-details {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .restaurant-name {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  .restaurant-cuisine p {
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  .restaurant-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-user {
+   width: 40px;
+   border-radius: 50%;
+  }
+  
+  .restaurant-owner {
+    margin-right: 10px;
+    i {
+      margin-left: 5px;
+    }
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  .link-to-text-color {
+    color: #605a56;
+  }
+  
+  a.link-to-text-color:hover {
+    color: #929aab;
+  }

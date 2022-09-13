@@ -10,21 +10,21 @@
       <div class="card-restaurant">
         <%= link_to restaurant_path(restaurant) do %>
           <% if restaurant.cuisine.downcase.include? 'french' %>
-            <%= image_tag "french-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "french-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'italian' %>
-            <%= image_tag "italian-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "italian-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
-            <%= image_tag "mediterranean-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "mediterranean-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'peruvian' %>
-            <%= image_tag "peruvian-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "peruvian-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'mexican' %>
-            <%= image_tag "mexican-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "mexican-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
-            <%= image_tag "mediterranean-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "mediterranean-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'fast food' %>
-            <%= image_tag "fast-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "fast-food.jpg", alt: restaurant.name %>
           <% elsif restaurant.cuisine.downcase.include? 'japanese' %>
-            <%= image_tag "japanese-food.jpeg", alt: restaurant.name %>
+            <%= image_tag "japanese-food.jpg", alt: restaurant.name %>
           <% end %>
         <% end %>
         <div class="cards-infos-restaurant mb-3">

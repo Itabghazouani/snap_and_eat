@@ -1,18 +1,26 @@
-<div class="col-s-12">
-    <div class="restaurant">
-      <div class="restaurant-location">
-        <p><span><i class="fas fa-map-marker-alt"></i></span><%= @restaurant.address %>
-      </div>
-      <div class="restaurant-info">
-
-        <div class="restaurant-details">
-          <div class="restaurant-name">
-            <%= @restaurant.name %>
-          </div>
-          <div class="restaurant-cuisine">
-            <p> <%= @restaurant.cuisine %> </p>
+    <div class="main-container">
+      <div class="restaurant-container">
+        <div class="restaurant-show mb-2">
+          <h2><%= @restaurant.name %></h2>
+        </div>
+        <div>
+          <%= link_to "Book Restaurant", new_restaurant_booking_path(@restaurant), class: "btn btn-show" %>
+        </div>
+        <div class="description-container">
+          <div class="icons-container">
+            <div class="icons">
+              <i class="fas fa-map-marker-alt"></i>
+              <span><%= @restaurant.address %> </span>
+            </div>
+            <div class="icons">
+              <i class="fas fa-utensils"></i>
+              <span><%= @restaurant.cuisine %> </span>
+            </div>
+            <div class="icons">
+              <i class="fas fa-star"></i>
+              <span><%= @restaurant.rating %> </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-</div>

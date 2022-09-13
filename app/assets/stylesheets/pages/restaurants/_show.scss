@@ -1,70 +1,63 @@
-.restaurant {
-    margin: 20px;
-    height: 250px;
-    background: white;
-    border-radius: 4px;
-    box-shadow:  0 1px 7px rgba(0,0,0,.05);
-  }
-  
-  .restaurant-location {
-    margin-left: 10px;
-    margin-bottom: 3px;
-    i {
-      margin-right: 5px;
-    }
-  }
-  
-  .restaurant-location p {
-    font-size: 14px;
-    font-weight: lighter;
-    margin: 0px;
-  }
-  
-  .restaurant-photo {
-    height: 60%;
-  }
-  
-  .restaurant-details {
-    padding-left: 10px;
-    padding-top: 10px;
-  }
-  
-  .restaurant-name {
-    font-weight: bold;
-    font-size: 22px;
-  }
-  
-  .restaurant-cuisine p {
-    font-size: 14px;
-    font-weight: lighter;
-  }
-  
-  .restaurant-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card-user {
-   width: 40px;
-   border-radius: 50%;
-  }
-  
-  .restaurant-owner {
-    margin-right: 10px;
-    i {
-      margin-left: 5px;
-    }
-  }
-  
-  a {
-    text-decoration: none !important;
-  }
-  
-  .link-to-text-color {
-    color: #605a56;
-  }
-  
-  a.link-to-text-color:hover {
-    color: #929aab;
-  }
+.main-container {
+  padding-top: 20px;
+  display: flex;
+  margin: 0 5px;
+}
+
+.restaurant-container {
+  width: 100%;
+  height: auto;
+  background: white;
+  box-shadow:0 0px 3px rgba(0, 0, 0, 0.1);
+  display:inline-block;
+}
+
+.restaurant-show {
+  height: 400px;
+  width: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url("https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.restaurant-show h2 {
+  top: 20px;
+  left: 20px;
+  margin: 0px;
+  color: white;
+  position: absolute;
+}
+
+.description-container {
+  margin-top: 15px;
+  font-size: 18px;
+  font-style: helvetica;
+  color: gray;
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  width: 100%;
+  margin-top: 53px;
+}
+
+.icons-container {
+  // display: inline-flex;
+}
+
+.btn-show {
+  position: absolute;
+  // bottom: 0px;
+  // right: 0px;
+  background-color: rgb(0,180,72);
+  color: white;
+  border-radius: 4px;
+  border-style: none;
+  padding: 6px 124px;
+  font-weight: 700;
+}
+
+body {
+  // background-color: #f7f7f7;
+}

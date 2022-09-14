@@ -17,8 +17,12 @@
               <span><%= @restaurant.cuisine %> </span>
             </div>
             <div class="icons">
-              <i class="fas fa-star"></i>
-              <span><%= @restaurant.rating %> </span>
+              <p class="mb-0"><%= "⭐" * @restaurant.rating %></p>
+            </div>
+            <div class="dishes">
+              <%= @restaurant.dishes.each do |dish|  %>
+                <%= dish.name %>
+              <% end %>
             </div>
           </div>
         </div>

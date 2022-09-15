@@ -1,15 +1,26 @@
-#container-cards-restaurant
+.background-photo {
+  background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(restaurant.jpg);
+  h1 {
+    // -webkit-text-stroke: 1px black;
+    font-weight: bolder;
+  }
 
+  h2 {
+    // -webkit-text-stroke: 1px black;
+    font-weight: bolder;
+  }
+}
 .cards-restaurant {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8px;
   // overflow: hidden;
   // height: 100px;
-  background-color: whitesmoke;
+  backdrop-filter: blur(10px);
+  background-color: rgba(234, 234, 236, 0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 5 auto;
-  border-radius: 20px;
+  margin: 2px 2px;
+  border-radius: 8px;
   // display: flex;
   // align-items: center;
 
@@ -26,6 +37,12 @@
   color: $yellow;
 
   strong {
-    color: $gray;
+    color: whitesmoke;
+    font-weight: bolder;
+    opacity: 1;
+  }
+
+  p {
+    color: white;
   }
 }

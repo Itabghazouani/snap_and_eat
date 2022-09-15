@@ -1,38 +1,40 @@
-<h1>Snap And Eat</h1>
-<h2>Get what you're craving!!! 🍕</h2>
+<div class="background-photo mt-0 pt-3">
+  <h1>Snap And Eat</h1>
+  <h2 id="center-h2">Get what you're craving!!! 🍕</h2>
 
 
-<%# Search part %>
-<div class ="container mt-3" id="container-cards-restaurant">
-  <h2>All our Restaurants (<%= Restaurant.count %>)</h2>
-  <div class="cards-restaurant">
-    <% @restaurants.each do |restaurant|%>
-      <div class="card-restaurant">
-        <%= link_to restaurant_path(restaurant) do %>
-          <% if restaurant.cuisine.downcase.include? 'french' %>
-            <%= image_tag "french-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'italian' %>
-            <%= image_tag "italian-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
-            <%= image_tag "mediterranean-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'peruvian' %>
-            <%= image_tag "peruvian-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'mexican' %>
-            <%= image_tag "mexican-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
-            <%= image_tag "mediterranean-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'fast food' %>
-            <%= image_tag "fast-food.jpg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'japanese' %>
-            <%= image_tag "japanese-food.jpg", alt: restaurant.name %>
+  <%# Search part %>
+  <div class ="container mt-3">
+    <h2>All our Restaurants (<%= Restaurant.count %>)</h2>
+    <div class="cards-restaurant">
+      <% @restaurants.each do |restaurant|%>
+        <div class="card-restaurant">
+          <%= link_to restaurant_path(restaurant) do %>
+            <% if restaurant.cuisine.downcase.include? 'french' %>
+              <%= image_tag "french-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'italian' %>
+              <%= image_tag "italian-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
+              <%= image_tag "mediterranean-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'peruvian' %>
+              <%= image_tag "peruvian-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'mexican' %>
+              <%= image_tag "mexican-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
+              <%= image_tag "mediterranean-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'fast food' %>
+              <%= image_tag "fast-food.jpg", alt: restaurant.name %>
+            <% elsif restaurant.cuisine.downcase.include? 'japanese' %>
+              <%= image_tag "japanese-food.jpg", alt: restaurant.name %>
+            <% end %>
           <% end %>
-        <% end %>
-        <div class="cards-infos-restaurant mb-3">
-          <p class="mb-0"><strong><%= restaurant.name %></strong></p>
-          <p class="mb-0"><%= "⭐️" * restaurant.rating %></p>
-          <p><%= restaurant.cuisine %></p>
+          <div class="cards-infos-restaurant mb-3">
+            <p class="mb-0"><strong><%= restaurant.name %></strong></p>
+            <p class="mb-0"><%= "⭐️" * restaurant.rating %></p>
+            <p><%= restaurant.cuisine %></p>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

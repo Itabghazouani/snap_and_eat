@@ -14,9 +14,15 @@
 @import "pages/index";
 // @import "pages/new";
 
+h1 {
+  text-align: center;
+}
 h2{
     color: white;
     font-weight: bolder;
     font-style: italic;
     font-size: 20px;
+}
+#center-h2 {
+  text-align: center;
 }

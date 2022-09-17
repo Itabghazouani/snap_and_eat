@@ -1,0 +1,98 @@
+.main-container {
+  padding-top: 20px;
+  display: flex;
+  margin: 0 5px;
+  background-color: linear-gradient(#f6e3ca, #9198e5);
+}
+
+.restaurant-container {
+  width: 100%;
+  height: auto;
+  background: white;
+  box-shadow:0 0px 3px rgba(0, 0, 0, 0.1);
+  display:inline-block;
+  background-color: linear-gradient(#f6e3ca, #080d4d);
+}
+
+.restaurant-show {
+  height: 400px;
+  width: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.restaurant-show h2 {
+  top: 20px;
+  left: 20px;
+  margin: 0px;
+  color: white;
+  position: absolute;
+}
+
+.description-container {
+  margin-top: 15px;
+  font-size: 18px;
+  font-style: helvetica;
+  color: gray;
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.btn-show {
+  background-color: rgb(0,180,72);
+  color: white;
+  border-radius: 4px;
+  border-style: none;
+  width: 100%;
+  font-weight: 700;
+}
+
+i{
+  color: #a08d8d;
+}
+
+.icons{
+  margin-left: 4px;
+}
+
+.dishes{
+  margin-top:4px;
+}
+
+.title {
+  font-size: 20px;
+  margin: 20px 4px 12px 4px;
+  font-weight: 600;
+}
+
+.card-dish{
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  padding: 16px;
+}
+
+
+.dish-heading {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dish-description{
+  font-size: 10px;
+}
+
+ul
+{
+  list-style-type: square;
+  padding: 0;
+}
+
+.star{
+  font-size: 14px;
+  margin-top: 4px;
+}

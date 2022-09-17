@@ -10,7 +10,6 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.restaurant = @restaurant
-    @booking.user = current_user
     authorize @booking
     if @booking.save
       redirect_to bookings_path
@@ -23,7 +22,6 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    @booking.user = current_user
     authorize @booking
     if @booking.save
       redirect_to bookings_path

@@ -2,6 +2,7 @@
   padding-top: 20px;
   display: flex;
   margin: 0 5px;
+  background-color: linear-gradient(#f6e3ca, #9198e5);
 }
 
 .restaurant-container {
@@ -10,6 +11,7 @@
   background: white;
   box-shadow:0 0px 3px rgba(0, 0, 0, 0.1);
   display:inline-block;
+  background-color: linear-gradient(#f6e3ca, #080d4d);
 }
 
 .restaurant-show {
@@ -19,7 +21,6 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url("https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 }
 
 .restaurant-show h2 {
@@ -39,25 +40,59 @@
   justify-content: space-around;
   // align-items: center;
   width: 100%;
-  margin-top: 53px;
-}
-
-.icons-container {
-  // display: inline-flex;
+  margin-top: 14px;
 }
 
 .btn-show {
-  position: absolute;
-  // bottom: 0px;
-  // right: 0px;
   background-color: rgb(0,180,72);
   color: white;
   border-radius: 4px;
   border-style: none;
-  padding: 6px 124px;
+  width: 100%;
   font-weight: 700;
 }
 
-body {
-  // background-color: #f7f7f7;
+i{
+  color: #a08d8d;
+}
+
+.icons{
+  margin-left: 4px;
+}
+
+.dishes{
+  margin-top:4px;
+}
+
+.title {
+  font-size: 20px;
+  margin: 20px 4px 12px 4px;
+  font-weight: 600;
+}
+
+.card-dish{
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  padding: 16px;
+}
+
+
+.dish-heading {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dish-description{
+  font-size: 10px;
+}
+
+ul
+{
+  list-style-type: square;
+  padding: 0;
+}
+
+.star{
+  font-size: 14px;
+  margin-top: 4px;
 }

@@ -1,26 +1,30 @@
-<div class="background-photo mt-0 pt-3">
+<div class="background-photo pb-2 pt-3">
   <h1>Snap And Eat</h1>
   <h2 id="center-h2">Get what you're craving!!! 🍕</h2>
 
 
-  <%= form_tag restaurants_path, method: :get do %>
+  <%= form_tag restaurants_path, id: "center-form", method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-horizontal",
-      placeholder: "What do you want to eat?"
+      placeholder: "French food?"
     %>
     <%= submit_tag "Search", class: "form-btn mt-2" %>
   <% end %>
-
+</div>
   <div class ="container mt-3">
-    <h2>All our Restaurants (<%= Restaurant.count %>)</h2>
+    <% if params[:query] %>
+      <h3> Results for : <strong><%= params[:query] %></strong> (<%= @restaurants.count %>)</h3>
+    <% else %>
+      <h3>All our Restaurants (<%= @restaurants.count %>)</h3>
+    <% end %>
     <div class="cards-restaurant">
       <% @restaurants.each do |restaurant|%>
         <div class="card-restaurant">
           <%= link_to restaurant_path(restaurant) do %>
             <%= image_tag restaurant.image_url %>
           <% end %>
-          <div class="cards-infos-restaurant mb-3">
+          <div class="cards-infos-restaurant p-2">
             <p class="mb-0"><strong><%= restaurant.name %></strong></p>
             <p class="mb-0"><%= "⭐️" * restaurant.rating %></p>
             <p><%= restaurant.cuisine %></p>
@@ -29,4 +33,3 @@
       <% end %>
     </div>
   </div>
-</div>

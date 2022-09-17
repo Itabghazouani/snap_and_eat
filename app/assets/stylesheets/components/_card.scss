@@ -1,5 +1,6 @@
 .background-photo {
   background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(restaurant.jpg);
+  text-align: center;
   h1 {
     // -webkit-text-stroke: 1px black;
     font-weight: bolder;
@@ -16,11 +17,7 @@
   grid-gap: 8px;
   // overflow: hidden;
   // height: 100px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(234, 234, 236, 0.2);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 2px 2px;
-  border-radius: 8px;
+  // backdrop-filter: blur(10px);
   // display: flex;
   // align-items: center;
 
@@ -31,18 +28,23 @@
   }
 }
 
+.card-restaurant {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 2px 2px;
+  border-radius: 8px;
+}
 
 .cards-infos-restaurant {
 
   color: $yellow;
 
   strong {
-    color: whitesmoke;
+    color: $gray;
     font-weight: bolder;
     opacity: 1;
   }
 
   p {
-    color: white;
+    color: $gray;
   }
 }

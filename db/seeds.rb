@@ -40,7 +40,8 @@ puts 'Creating dishes'
 
 100.times do
   dish = Dish.new(
-    name: Faker::Food.dish
+    name: Faker::Food.dish,
+    details: Faker::Food.description
   )
   dish.save!
 end

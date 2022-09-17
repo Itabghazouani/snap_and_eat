@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="restaurant-container">
+    <div class="restaurant-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= restaurant_img(@restaurant) %>);" >
+      <h2><%= @restaurant.name %></h2>
+    </div>
+    <div>
+      <%= link_to "Book Restaurant", new_restaurant_booking_path(@restaurant), class: "btn btn-show" %>
+    </div>
+    <div class="description-container">
+      <div class="icons-container">
+        <div class="icons">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="address"><%= @restaurant.address %> </span>
+        </div>
+        <div class="icons">
+          <i class="fas fa-utensils"></i>
+          <span class="cuisine"><%= @restaurant.cuisine %> </span>
+        </div>
+        <div class="icons">
+          <p class="star"><%= "⭐" * @restaurant.rating %></p>
+        </div>
+        <div class="dishes">
+          <h2 class="title"><%= @restaurant.name %>'s dishes:</h2>
+            <% @restaurant.dishes.each do |dish|  %>
+              <div class="card-dish mb-2">
+                <span class="dish-heading"><%= dish.name %></span>
+                <p class="dish-description"><%= dish.details %></p>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

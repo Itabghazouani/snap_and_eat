@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2022_09_17_082921) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "details"
   end
 
   create_table "order_restaurant_dishes", force: :cascade do |t|

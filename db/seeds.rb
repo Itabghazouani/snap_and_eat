@@ -10,7 +10,7 @@ User.destroy_all
 puts 'Creating users'
 
 user1 = User.new(
-  email: 'itab.ghazuani@gmail.com',
+  email: 'itab.ghazouani@gmail.com',
   password: 'Password'
 )
 user1.save!
@@ -25,12 +25,13 @@ puts 'Creating restaurants'
 
 cuisines = ['French', 'Italian', 'Fast Food', 'Mediterranean', 'Japanese', 'Peruvian', 'Mexican']
 
-100.times do
+50.times do |i|
   restaurant = Restaurant.new(
     name:    Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     rating:  rand(0..5),
-    cuisine: cuisines.sample
+    cuisine: cuisines.sample,
+    image_url: "restaurant_#{i + 1}"
   )
   restaurant.save!
 end

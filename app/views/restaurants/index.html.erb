@@ -1,38 +1,35 @@
-<h1>Snap And Eat</h1>
-<h2>Get what you're craving!!! 🍕</h2>
+<div class="background-photo pb-2 pt-3">
+  <h1>Snap And Eat</h1>
+  <h2 id="center-h2">Get what you're craving!!! 🍕</h2>
 
 
-<%# Search part %>
-<div class ="container mt-3" id="container-cards-restaurant">
-  <h2>All our Restaurants (<%= Restaurant.count %>)</h2>
-  <div class="cards-restaurant">
-    <% @restaurants.each do |restaurant|%>
-      <div class="card-restaurant">
-        <%= link_to restaurant_path(restaurant) do %>
-          <% if restaurant.cuisine.downcase.include? 'french' %>
-            <%= image_tag "french-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'italian' %>
-            <%= image_tag "italian-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
-            <%= image_tag "mediterranean-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'peruvian' %>
-            <%= image_tag "peruvian-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'mexican' %>
-            <%= image_tag "mexican-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'mediterranean' %>
-            <%= image_tag "mediterranean-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'fast food' %>
-            <%= image_tag "fast-food.jpeg", alt: restaurant.name %>
-          <% elsif restaurant.cuisine.downcase.include? 'japanese' %>
-            <%= image_tag "japanese-food.jpeg", alt: restaurant.name %>
-          <% end %>
-        <% end %>
-        <div class="cards-infos-restaurant mb-3">
-          <p class="mb-0"><strong><%= restaurant.name %></strong></p>
-          <p class="mb-0"><%= "⭐️" * restaurant.rating %></p>
-          <p><%= restaurant.cuisine %></p>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <%= form_tag restaurants_path, id: "center-form", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-horizontal",
+      placeholder: "French food?"
+    %>
+    <%= submit_tag "Search", class: "form-btn mt-2" %>
+  <% end %>
 </div>
+  <div class ="container mt-3">
+    <% if params[:query] %>
+      <h3> Results for : <strong><%= params[:query] %></strong> (<%= @restaurants.count %>)</h3>
+    <% else %>
+      <h3>All our Restaurants (<%= @restaurants.count %>)</h3>
+    <% end %>
+    <div class="cards-restaurant">
+      <% @restaurants.each do |restaurant|%>
+        <div class="card-restaurant">
+          <%= link_to restaurant_path(restaurant) do %>
+            <%= image_tag restaurant.image_url %>
+          <% end %>
+          <div class="cards-infos-restaurant p-2">
+            <p class="mb-0"><strong><%= restaurant.name %></strong></p>
+            <p class="mb-0"><%= "⭐️" * restaurant.rating %></p>
+            <p><%= restaurant.cuisine %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>

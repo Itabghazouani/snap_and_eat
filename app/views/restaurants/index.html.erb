@@ -1,13 +1,13 @@
 <div class="background-photo pb-2 pt-3">
   <h1>Snap And Eat</h1>
-  <h2 id="center-h2">Get what you're craving!!! 🍕</h2>
+  <h2 id="center-h2">Get what you're craving!!!</h2>
 
 
   <%= form_tag restaurants_path, id: "center-form", method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-horizontal",
-      placeholder: "French food?"
+      placeholder: "Ceviche..."
     %>
     <%= submit_tag "Search", class: "form-btn mt-2" %>
   <% end %>

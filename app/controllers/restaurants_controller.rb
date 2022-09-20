@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
 
   def index
     if params[:query].present?
-      @restaurants = Restaurant.search_by_name_and_cuisine(params[:query])
+      @restaurants = policy_scope(Restaurant.search_by_name_cuisine_and_dishes(params[:query]))
     else
       @restaurants = policy_scope(Restaurant)
     end

@@ -1,21 +1,21 @@
 .main-container {
-  padding-top: 20px;
+  padding-top: 8px;
   display: flex;
   margin: 0 5px;
-  background-color: linear-gradient(#f6e3ca, #9198e5);
+  background: linear-gradient(rgba(250, 240, 228, 0.90), rgba(236, 173, 102, 0.2));
 }
 
 .restaurant-container {
   width: 100%;
   height: auto;
-  background: white;
+  background: #f5f5f5;
   box-shadow:0 0px 3px rgba(0, 0, 0, 0.1);
   display:inline-block;
-  background-color: linear-gradient(#f6e3ca, #080d4d);
+  background: linear-gradient(rgba(255, 255, 255, 0.71), rgba(255, 168, 71, 0.31));
 }
 
 .restaurant-show {
-  height: 400px;
+  height: 285px;
   width: 100%;
   background-size: cover !important;
   background-repeat: no-repeat;
@@ -68,6 +68,7 @@ i{
   font-size: 20px;
   margin: 20px 4px 12px 4px;
   font-weight: 600;
+  color: #8b8585;
 }
 
 .card-dish{
@@ -80,10 +81,22 @@ i{
 .dish-heading {
   font-size: 12px;
   font-weight: bold;
+  .dish-icon-red{
+    color:red;
+  }
+  .dish-icon-green{
+    color: green;
+  }
 }
 
 .dish-description{
   font-size: 10px;
+}
+
+.dish-price{
+  display: flex;
+  flex-direction: row-reverse;
+  margin: -10px 0 0 0;
 }
 
 ul

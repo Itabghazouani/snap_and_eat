@@ -12,14 +12,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-// @import "pages/new";
+// @import "pages/restaurants/show";
 
 html {
   min-height: 100%;
 }
 
 body {
-  background: linear-gradient(rgba(196, 181, 163, 0.1),rgba(192, 133, 67, 0.3));
+  background: linear-gradient(rgba(250, 240, 228, 0.1), rgba(236, 173, 102, 0.2));
 }
 
 h1 {

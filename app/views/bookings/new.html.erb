@@ -1,0 +1,29 @@
+
+<%= link_to restaurant_path(@restaurant) do %>
+  <i class="fa-solid fa-arrow-left"></i>
+<% end %>
+
+<div class="main-container">
+  <div class="restaurant-container">
+    <div class="restaurant-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@restaurant.image_url) %>);" >
+      <h2><%= @restaurant.name %></h2>
+    </div>
+    <div>
+      <h2>Make your booking</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 offset-3">
+          <%= simple_form_for [@restaurant, @booking] do |f| %>
+            <%= f.input :name, label: 'Name', error: 'Name is mandatory, please specify one'%>
+            <%= f.input :phone_number, label: 'Phone number', error: 'Phone Number is mandatory, please specify one'%>
+            <%= f.input :booking_date, as: :datetime, placeholder: 'When would you like to book for?' %>
+            <%= f.input :guest_count, placeholder: 'How many guests would you be?' %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

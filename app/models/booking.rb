@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
   validates :name, presence: true
   validates :phone_number, presence: true
   validates :booking_date, presence: true
+  validates :guest_count, presence: true
   validate :booking_date_in_the_past
 
   private

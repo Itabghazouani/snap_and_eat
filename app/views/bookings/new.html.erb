@@ -1,4 +1,4 @@
-<div class="restaurant-container">
+<div class="booking-container">
   <div class="restaurant-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@restaurant.image_url) %>);" >
     <%= link_to restaurant_path(@restaurant), class: "back-btn" do %>
       <i class="fas fa-arrow-left"></i>
@@ -6,7 +6,7 @@
     <h2><%= @restaurant.name %></h2>
   </div>
   <div>
-    <h3>Make your booking</h3>
+    <h3 class="h3-font-design uppercase-text">Make your booking</h3>
   </div>
   <%= render 'shared/form' %>
 </div>

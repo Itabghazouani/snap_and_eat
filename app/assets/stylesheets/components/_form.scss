@@ -1,12 +1,13 @@
-h3 {
-  text-transform: uppercase;
+.h3-font-design {
   text-align: center;
-  font-size: 25px;
-  font-family: "Poppins-Medium";
-  color: #3e91f7;
   letter-spacing: 2px;
   margin-bottom: 22px;
   font-weight: 500;
+}
+
+.form-container{
+  padding-bottom: 12px;
+
 }
 
 .form-row {
@@ -20,4 +21,8 @@ h3 {
   margin-right: 0;
   width: 100%;
   position: relative;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
 }

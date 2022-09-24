@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-6 offset-3">
       <%= simple_form_for [@restaurant, @booking] do |f| %>
+      <div class="form-container">
         <div class="form-row">
           <div class="form-wrapper">
             <%= f.input :name, label: 'Name', error: 'Name is mandatory, please specify one'%>
@@ -19,6 +20,7 @@
           </div>
         </div>
         <%= f.submit class: "submit-btn" %>
+      </div>
       <% end %>
     </div>
   </div>

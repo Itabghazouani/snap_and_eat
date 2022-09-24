@@ -21,14 +21,15 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-}
 
-.restaurant-show h2 {
-  top: 20px;
-  left: 20px;
-  margin: 0px;
-  color: white;
-  position: absolute;
+  h2 {
+    margin: auto;
+    top: 56px;
+    left: 20px;
+    margin: 0px;
+    color: white;
+    position: absolute;
+  }
 }
 
 .description-container {
@@ -44,11 +45,13 @@
 }
 
 .btn-show {
+  display: block;
   background-color: rgb(0,180,72);
   color: white;
   border-radius: 4px;
   border-style: none;
   width: 100%;
+  margin: auto;
   font-weight: 700;
 }
 

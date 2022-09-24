@@ -66,6 +66,8 @@ User.all.each do |user|
     booking = Booking.new(
       restaurant: Restaurant.all.sample,
       user: user,
+      phone_number: Faker::PhoneNumber,
+      name: Faker::Name,
       guest_count: rand(1..6),
       booking_date: Faker::Time.forward(days: 5,  period: :evening, format: :long)
     )

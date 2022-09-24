@@ -1,7 +1,5 @@
 .main-container {
-  padding-top: 20px;
   display: flex;
-  margin: 0 5px;
   background-color: linear-gradient(#f6e3ca, #9198e5);
 }
 
@@ -15,21 +13,29 @@
 }
 
 .restaurant-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 400px;
   width: 100%;
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+
+  h2 {
+    text-align: center;
+    margin: auto;
+  }
 }
 
-.restaurant-show h2 {
-  top: 20px;
-  left: 20px;
-  margin: 0px;
-  color: white;
-  position: absolute;
-}
+// .restaurant-show h2 {
+//   top: 20px;
+//   left: 20px;
+//   margin: 0px;
+//   color: white;
+//   position: absolute;
+// }
 
 .description-container {
   margin-top: 15px;
@@ -44,11 +50,13 @@
 }
 
 .btn-show {
+  display: block;
   background-color: rgb(0,180,72);
   color: white;
   border-radius: 4px;
   border-style: none;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   font-weight: 700;
 }
 

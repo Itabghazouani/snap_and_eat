@@ -1,6 +1,7 @@
 .background-photo {
   background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(restaurant.jpg);
   text-align: center;
+  max-height: 100%;
   h1 {
     // -webkit-text-stroke: 1px black;
     font-weight: bolder;

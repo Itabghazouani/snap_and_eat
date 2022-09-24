@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <%= simple_form_for [@restaurant, @booking] do |f| %>
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-wrapper">
+            <%= f.input :name, label: 'Name', error: 'Name is mandatory, please specify one'%>
+          </div>
+          <div class="form-wrapper">
+            <%= f.input :phone_number, label: 'Phone', error: 'Phone Number is mandatory, please specify one'%>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-wrapper">
+            <%= f.input :booking_date, as: :datetime, html5: true, placeholder: 'When would you like to book for?' %>
+          </div>
+          <div class="form-wrapper">
+            <%= f.input :guest_count, label: 'Guests count', error: "We need to know how many people would come." %>
+          </div>
+        </div>
+        <%= f.submit class: "submit-btn" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

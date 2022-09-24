@@ -1,3 +1,4 @@
+
 <div class="main-container">
   <div class="restaurant-container">
     <div class="restaurant-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@restaurant.image_url) %>);" >
@@ -17,14 +18,17 @@
           <span class="cuisine"><%= @restaurant.cuisine %> </span>
         </div>
         <div class="icons">
-          <p class="star"><%= "⭐" * @restaurant.rating %></p>
+          <p class="star"><%= "⭐" * @restaurant.rating %><%= (@restaurant.rating) %></p>
         </div>
         <div class="dishes">
           <h2 class="title"><%= @restaurant.name %>'s dishes:</h2>
             <% @restaurant.dishes.each do |dish|  %>
               <div class="card-dish mb-2">
-                <span class="dish-heading"><%= dish.name %></span>
+                <span class="dish-heading"><%= dish.name %> <span class="dish-icon-red"><%= ["🌶", nil].sample %></span><span class="dish-icon-green"><%= ["🥕", "✔", nil].sample %> </span></span>
                 <p class="dish-description"><%= dish.details %></p>
+                <div class="dish-price">
+                  <p><%= rand(8..16) %>€</p>
+                </div>
               </div>
             <% end %>
         </div>

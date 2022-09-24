@@ -19,11 +19,15 @@
           <span class="cuisine"><%= @restaurant.cuisine %> </span>
         </div>
         <div class="icons">
-          <p class="star"><%= "⭐" * @restaurant.rating %><%= (@restaurant.rating) %></p>
+          <% if @restaurant.rating > 0 %>
+            <p class="star"><%= "⭐" * @restaurant.rating %><%= @restaurant.rating %> (<%= (@restaurant.review_quantity).round(-1) %>+)</p>
+          <% else %>
+            <p class="rated">This restaurant has not been rated yet<p>
+          <% end %>  
         </div>
         <div class="dishes">
           <h2 class="title"><%= @restaurant.name %>'s dishes:</h2>
-            <% @restaurant.dishes.each do |dish|  %>
+            <% @restaurant.dishes.each do |dish| %>
               <div class="card-dish mb-2">
                 <span class="dish-heading"><%= dish.name %> <span class="dish-icon-red"><%= ["🌶", nil].sample %></span><span class="dish-icon-green"><%= ["🥕", "✔", nil].sample %> </span></span>
                 <p class="dish-description"><%= dish.details %></p>

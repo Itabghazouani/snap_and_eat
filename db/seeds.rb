@@ -31,7 +31,8 @@ cuisines = ['French', 'Italian', 'Fast Food', 'Mediterranean', 'Japanese', 'Peru
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     rating:  rand(0..5),
     cuisine: cuisines.sample,
-    image_url: "restaurant_#{i + 1}"
+    image_url: "restaurant_#{i + 1}",
+    review_quantity: Faker::Number.number(digits: 3)
   )
   restaurant.save!
 end

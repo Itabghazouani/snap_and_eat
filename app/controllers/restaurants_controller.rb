@@ -1,6 +1,12 @@
 class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
+    @markers = Restaurant.geocoded.where(id: @restaurant.id).map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude
+      }
+    end
     authorize @restaurant
   end
 
@@ -11,11 +17,6 @@ class RestaurantsController < ApplicationController
       @restaurants = policy_scope(Restaurant)
     end
 
-    @markers = @restaurants.geocoded.map do |restaurant|
-      {
-        lat: restaurant.latitude,
-        lng: restaurant.longitude
-      }
-    end
+
   end
 end

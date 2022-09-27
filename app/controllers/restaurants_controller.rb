@@ -10,5 +10,12 @@ class RestaurantsController < ApplicationController
     else
       @restaurants = policy_scope(Restaurant)
     end
+
+    @markers = @restaurants.geocoded.map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude
+      }
+    end
   end
 end

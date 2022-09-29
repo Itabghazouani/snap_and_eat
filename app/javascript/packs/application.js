@@ -14,12 +14,12 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
-import './add_jquery'
+// import './add_jquery'
 
-$("p").handler(function(){
-    if ($('p').hasClass('element')){ 
-    $(this).removeClass('element').addClass('wave');
-    } else {
-     $(this).removeClass('wave').addClass('element'); 
-    }
-  });
+// $("p").handler(function(){
+//     if ($('p').hasClass('element')){
+//     $(this).removeClass('element').addClass('wave');
+//     } else {
+//      $(this).removeClass('wave').addClass('element');
+//     }
+//   });

@@ -33,7 +33,8 @@ addresses = ["Calle Valencia, 181, 08011 Barcelona", "Calle Valencia, 90, 08015 
     address: addresses.sample,
     rating:  rand(0..5),
     cuisine: cuisines.sample,
-    image_url: "restaurant_#{i + 1}"
+    image_url: "restaurant_#{i + 1}",
+    review_quantity: Faker::Number.number(digits: 3)
   )
   restaurant.save!
 end

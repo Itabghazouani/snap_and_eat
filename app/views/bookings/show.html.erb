@@ -1,0 +1,27 @@
+<div class="main-container-book">
+  <div class="booking-container">
+    <h1 class="heading-book">Excellent choice <%= @booking.name %>!<span class="thumb">🥂</span>
+    <h2 class="heading-book">You're going to:</h2>
+    <div class="booking-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@booking.restaurant.image_url) %>);" >
+      <h2><%= @booking.restaurant.name %></h2>
+    </div>
+    <div class="description-container-book">
+      <div class="icons-container">
+        <h3 class="details-title">See all your details below</h3>
+        <div class="icons-book">
+          <i class="fas fa-users"></i>
+            <%= @booking.guest_count %> people
+        </div>
+        <div class="icons-book">
+          <i class="fas fa-calendar-alt"></i>
+            <%= @booking.booking_date %>
+        </div>
+        <div class="icons-book">
+          <i class="fas fa-phone"></i>
+            <%= @booking.phone_number %>
+        </div>
+      </div>
+    </div>
+    <h2 class="heading-cancel">See an issue with your details? You can cancel and rebook here!</h2>
+  </div>
+</div>

@@ -1,17 +1,5 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  padding: 4px;
+.navbar {
   background: linear-gradient(rgba(250, 240, 228, 0.1), rgba(236, 173, 102, 0.2));
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  object-fit: cover;
-  // filter: invert(298%) sepia(152%) saturate(659%) hue-rotate(300deg) brightness(94%) contrast(245%);
 }
 
 #logo{
@@ -20,17 +8,4 @@
   color: #8b8585;
   margin-top: 14px;
   text-shadow: 1px 1px 1px;
-}
-
-.dropdown{
-  flex-direction: inherit;
-  justify-content: flex-end;
-}
-
-.wave::before {
-  content: "🔥";
-}
-
-.element::after {
-  content: "💥";
 }

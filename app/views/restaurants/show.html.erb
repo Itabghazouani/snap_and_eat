@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="restaurant-container">
-    <div class="restaurant-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@restaurant.image_url) %>);" >
+    <div class="restaurant-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@restaurant.image_url + ".jpg") %>);" >
       <%= link_to restaurants_path, class: "back-btn" do %>
         <i class="fas fa-arrow-left"></i>
       <% end %>
@@ -31,7 +31,7 @@
             <p class="star"><%= "⭐" * @restaurant.rating %><%= @restaurant.rating %> (<%= (@restaurant.review_quantity).round(-1) %>+)</p>
           <% else %>
             <p class="rated">This restaurant has not been rated yet<p>
-          <% end %>  
+          <% end %>
         </div>
         <div class="dishes">
           <h2 class="title"><%= @restaurant.name %>'s dishes:</h2>

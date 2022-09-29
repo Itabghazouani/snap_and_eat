@@ -22,7 +22,7 @@
       <% @restaurants.each do |restaurant|%>
         <div class="card-restaurant">
           <%= link_to restaurant_path(restaurant) do %>
-            <%= image_tag restaurant.image_url %>
+            <%= image_tag "#{restaurant.image_url}.jpg" %>
           <% end %>
           <div class="cards-infos-restaurant p-2">
             <p class="mb-0"><strong><%= restaurant.name %></strong></p>

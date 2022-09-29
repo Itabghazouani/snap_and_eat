@@ -1,6 +1,6 @@
 <h1 class="heading-book">Excellent choice <%= @booking.name %>!<span class="thumb">🥂</span>
 <h2 class="heading-book">You're going to:</h2>
-<div class="booking-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@booking.restaurant.image_url) %>);" >
+<div class="booking-show mb-2" style="background-image: linear-gradient(rgba(0,0,0,1) 0%,rgba(24,35,44,0) 19%,rgba(125,185,232,0) 100%), url(<%= asset_path(@booking.restaurant.image_url + ".jpg") %>);" >
   <h2><%= @booking.restaurant.name %></h2>
 </div>
 <div>

@@ -5,12 +5,15 @@
 
 .booking-container {
   width: 100%;
-  height: auto;
+  height: 100vh;
   // background: #f5f5f5;
   display:inline-block;
   background: linear-gradient(rgba(255, 255, 255, 0.71), rgba(255, 168, 71, 0.31));
 }
 
+.details-booking-color {
+  background: rgba(236, 173, 102, 0.2);
+}
 .booking-show {
   height: 285px;
   width: 100%;
@@ -32,33 +35,39 @@
 .heading-book{
   font-weight: bolder;
   color: #8b8585;
-  margin-top: 20px;
+  padding-top: 20px;
   margin-left: 4px;
 }
 
 .description-container-book{
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 20px;
   font-style: helvetica;
   color: gray;
   display: flex;
   // align-items: center;
   width: 100%;
+  padding-top: 12px;
+  padding-left: 12px;
   margin-left: 4px;
-  margin-bottom: 38px;
+  margin-bottom: 80px;
 }
 
 .details-title{
   font-weight: bolder;
   color: #8b8585;
-  font-size: large;
+  font-size: 25px;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   margin-bottom: 18px;
 }
 
 .icons-book{
-  padding: 4px;
+  padding: 12px;
+}
+
+.center-position {
+  padding-top: 14px;
 }
 
 .thumb{
@@ -74,4 +83,8 @@
   margin-bottom: 8px;
   font-size: 18px;
   text-decoration: none;
+}
+
+.center-position {
+
 }

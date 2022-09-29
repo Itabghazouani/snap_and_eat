@@ -1,9 +1,11 @@
 <div class="d-flex justify-content-between w-100 py-2 px-1 navbar">
-  <h3 id="logo">Snap and Eat!</h3>
+  <%= link_to restaurants_path, class: "navbar-brand" do %>
+    <h3 id="logo">Snap and Eat!</h3>
+  <% end %>
   <div>
     <% if current_user %>
       <%= link_to "Log out", destroy_user_session_path, method: :get, class: "dropdown-item" %>
-    <% else %> 
+    <% else %>
       <%= link_to "Login", new_user_session_path, class: "nav-link" %>
     <% end %>
   </div>

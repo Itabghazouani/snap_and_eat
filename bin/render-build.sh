@@ -7,4 +7,4 @@ yarn install
 bundle exec rake assets:precompile
 bundle exec rake assets:clean
 bundle exec rake db:migrate
-echo "Database URL: $DATABASE_URL"
+bundle exec rake db:seed

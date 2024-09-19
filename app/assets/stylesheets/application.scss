@@ -2,11 +2,9 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
-@import "bootstrap/scss/bootstrap";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
-@import "font-awesome-sprockets";
 @import "font-awesome";
 
 // Your CSS partials
@@ -25,13 +23,13 @@ body {
 }
 
 h1 {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins-Medium", sans-serif;
   color: whitesmoke;
   text-align: center;
 }
 
 h2{
-  font-family: "Poppins-Medium";
+  font-family: "Poppins-Medium", sans-serif;
   color: whitesmoke;
   font-weight: bolder;
   font-style: italic;
@@ -43,7 +41,7 @@ h2{
 }
 
 h3 {
-  font-family: "Poppins-Medium";
+  font-family: "Poppins-Medium", sans-serif;
   color: black;
   font-weight: 500;
 }

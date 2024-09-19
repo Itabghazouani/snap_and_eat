@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_28_202022) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_09_24_150446) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,9 +18,9 @@ ActiveRecord::Schema.define(version: 2022_09_28_202022) do
     t.bigint "restaurant_id", null: false
     t.bigint "user_id", null: false
     t.integer "guest_count"
-    t.datetime "booking_date"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "booking_date", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "name"
     t.string "phone_number"
     t.index ["restaurant_id"], name: "index_bookings_on_restaurant_id"
@@ -30,8 +29,8 @@ ActiveRecord::Schema.define(version: 2022_09_28_202022) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "details"
   end
 
@@ -40,18 +39,18 @@ ActiveRecord::Schema.define(version: 2022_09_28_202022) do
     t.bigint "restaurant_dish_id", null: false
     t.integer "quantity"
     t.float "price_for_dish"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_restaurant_dishes_on_order_id"
     t.index ["restaurant_dish_id"], name: "index_order_restaurant_dishes_on_restaurant_dish_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.bigint "restaurant_id", null: false
-    t.datetime "order_date"
+    t.datetime "order_date", precision: nil
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -60,8 +59,8 @@ ActiveRecord::Schema.define(version: 2022_09_28_202022) do
     t.bigint "restaurant_id", null: false
     t.bigint "dish_id", null: false
     t.float "price_for_dish"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["dish_id"], name: "index_restaurant_dishes_on_dish_id"
     t.index ["restaurant_id"], name: "index_restaurant_dishes_on_restaurant_id"
   end
@@ -71,22 +70,22 @@ ActiveRecord::Schema.define(version: 2022_09_28_202022) do
     t.string "address"
     t.integer "rating"
     t.string "cuisine"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "image_url"
+    t.integer "review_quantity"
     t.float "latitude"
     t.float "longitude"
-    t.integer "review_quantity"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

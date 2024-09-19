@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: snap_and_eat_production
-  username: snap_and_eat
-  password: <%= ENV['SNAP_AND_EAT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

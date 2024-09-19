@@ -6,6 +6,7 @@ ruby '3.2.2'  # Update to the latest stable Ruby version
 gem 'rails', '~> 7.0.8'  # Update to Rails 7
 gem 'pg', '~> 1.5'  # Update PostgreSQL adapter
 gem 'puma', '~> 6.0'  # Update Puma
+gem 'bootstrap', '~> 5.3.0'
 gem 'sass-rails', '~> 6.0'
 gem 'webpacker', '~> 5.0'  # Consider replacing with jsbundling-rails for Rails 7
 gem 'turbo-rails'  # Replace turbolinks with turbo

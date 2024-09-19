@@ -13,7 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "controllers"
-import "bootstrap"
+import * as bootstrap from "bootstrap"
 // import './add_jquery'
 
 // $("p").handler(function(){

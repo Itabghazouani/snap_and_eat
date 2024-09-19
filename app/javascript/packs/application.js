@@ -13,7 +13,8 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "controllers"
-import * as bootstrap from "bootstrap"
+import "bootstrap"
+import "@popperjs/core"
 // import './add_jquery'
 
 // $("p").handler(function(){

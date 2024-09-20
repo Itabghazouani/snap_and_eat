@@ -12,7 +12,10 @@
         <div data-controller="display">
           <div class="icons">
             <i class="fas fa-map-marker-alt"></i>
-            <span class="address" data-action="click->display#display"><%= @restaurant.address %> </span>
+            <span class="address" data-action="click->display#display">
+              <%= @restaurant.address %>
+              (Click to toggle map)
+              </span>
           </div>
           <div style="width: 100%; height: 300px; margin-top: 8px; margin-bottom: 8px;"
             data-controller="mapbox"
@@ -20,7 +23,9 @@
             data-mapbox-markers-value="<%= @markers.to_json %>"
             data-display-target="displayable"
             class="d-none">
+              Map should appear here
           </div>
+
         </div>
         <div class="icons">
           <i class="fas fa-utensils"></i>
@@ -49,3 +54,8 @@
     </div>
   </div>
 </div>
+
+<script>
+  console.log("Markers from view:", <%= @markers.to_json.html_safe %>);
+  console.log("Restaurant coordinates:", <%= @restaurant.latitude %>, <%= @restaurant.longitude %>);
+</script>

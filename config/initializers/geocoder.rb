@@ -3,7 +3,13 @@ Geocoder.configure(
   units: :km, # defaults to miles (:mi)
   lookup: :mapbox,
   api_key: ENV['MAPBOX_API_KEY'],
-  use_https: true
+  use_https: true,
+  always_raise: [
+    Geocoder::OverQueryLimitError,
+    Geocoder::RequestDenied,
+    Geocoder::InvalidRequest,
+    Geocoder::InvalidApiKey
+  ]
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)

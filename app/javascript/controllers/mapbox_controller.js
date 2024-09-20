@@ -8,6 +8,9 @@ export default class extends Controller {
   }
 
   connect() {
+    console.log("Mapbox controller connected");
+    console.log("API Key:", this.apiKeyValue);
+    console.log("Markers:", this.markersValue);
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -20,6 +23,7 @@ export default class extends Controller {
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
+      console.log("Adding marker:", marker);
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(this.map)

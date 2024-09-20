@@ -16,4 +16,18 @@ class Restaurant < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  private
+
+  def geocode
+    result = Geocoder.search(address)
+    if result.first
+      Rails.logger.debug "Geocoding successful for #{address}: #{result.first.coordinates}"
+    else
+      Rails.logger.error "Geocoding failed for #{address}"
+    end
+    super
+  rescue => e
+    Rails.logger.error "Geocoding error for #{address}: #{e.message}"
+  end
 end

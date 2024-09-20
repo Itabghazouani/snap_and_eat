@@ -1,9 +1,9 @@
 Geocoder.configure(
   # Geocoding options
   units: :km, # defaults to miles (:mi)
+  lookup: :mapbox,
   api_key: ENV['MAPBOX_API_KEY'],
-  use_https: true,
-  geocoding_service: :mapbox
+  use_https: true
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
